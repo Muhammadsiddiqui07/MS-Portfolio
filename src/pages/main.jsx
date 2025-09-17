@@ -6,7 +6,6 @@ import { Typewriter } from "react-simple-typewriter";
 import mainBg from "../Assests/main-bg.jpeg";
 import profile from '../Assests/profile.jpg'
 import { motion } from "framer-motion";
-import { Code, Briefcase, Award } from "lucide-react";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -27,6 +26,9 @@ import {
   SiDotnet,
   SiGit,
 } from "react-icons/si";
+import { Tabs } from 'antd';
+
+
 
 
 
@@ -37,6 +39,7 @@ const MainPage = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
 
   const skills = [
     { name: "HTML5", icon: <FaHtml5 className="text-orange-500 w-12 h-12" /> },
@@ -52,11 +55,30 @@ const MainPage = () => {
     { name: "Ant Design", icon: <SiAntdesign className="text-blue-400 w-12 h-12" /> },
     { name: "GitHub", icon: <FaGithub className="text-white w-12 h-12" /> },
     { name: "VS Code", icon: <SiVuetify className="text-blue-500 w-12 h-12" /> },
-    { icon: <SiPython className="text-yellow-400" />, name: "Python" },
-    { icon: <SiGit className="text-red-500" />, name: "Git" },
-    { icon: <SiDotnet className="text-indigo-400" />, name: "ASP.NET MVC" },
+    { icon: <SiPython className="text-yellow-400 w-12 h-12" />, name: "Python" },
+    { icon: <SiGit className="text-red-500 w-12 h-12" />, name: "Git" },
+    { icon: <SiDotnet className="text-indigo-400 w-12 h-12" />, name: "ASP.NET MVC" },
 
   ];
+
+  const items = [
+    {
+      key: '1',
+      label: 'Front End',
+      children: 'Content of Tab Pane 1',
+    },
+    {
+      key: '2',
+      label: 'Back End',
+      children: 'Content of Tab Pane 2',
+    },
+    {
+      key: '3',
+      label: 'Client Projects',
+      children: 'Content of Tab Pane 3',
+    },
+  ];
+
 
   return (
 
@@ -128,13 +150,13 @@ const MainPage = () => {
                 </NavLink>
 
                 <a
-                  href="/resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/MS_MERN_CV.pdf" // yaha apna pdf file ka path do (e.g. /assets/resume.pdf ya public folder me resume.pdf)
+                  download="Muhammad_Siddiqui_CV.pdf" // isse download hone par file ka naam set hoga
                   className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-cyan-400/40 text-gray-200 hover:bg-cyan-500/10 transition-all duration-300"
                 >
-                  View Resume
+                  Download CV
                 </a>
+
               </div>
             </div>
 
@@ -261,80 +283,27 @@ const MainPage = () => {
 
       <section
         id="portfolio"
-        className="relative min-h-screen bg-gradient-to-br from-gray-950 via-slate-900 to-black text-gray-100 py-20 px-6 lg:px-16"
+        className="relative min-h-screen bg-gradient-to-br from-gray-950 via-slate-950 to-black text-white py-20 px-6 lg:px-16"
       >
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto w-full text-center">
           {/* Heading */}
-          <motion.h2
-            initial={{ opacity: 0, y: -40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl lg:text-5xl font-bold text-center bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent"
-          >
-            My Portfolio
-          </motion.h2>
+          <h2 className="text-3xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-teal-400 bg-clip-text text-transparent mb-10">
+            Portfolio
+          </h2>
 
-          {/* Subsections */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-16">
-            {/* Projects */}
-            <motion.div
-              initial={{ opacity: 0, x: -60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-900/60 border border-slate-700 rounded-2xl p-6 shadow-lg hover:shadow-purple-500/20 transition"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <Code className="text-purple-400" size={28} />
-                <h3 className="text-2xl font-semibold">Projects</h3>
-              </div>
-              <ul className="space-y-3">
-                <li className="hover:text-purple-400 transition">🚀 E-commerce Website</li>
-                <li className="hover:text-purple-400 transition">💻 Portfolio Website</li>
-                <li className="hover:text-purple-400 transition">📱 Mobile App with Flutter</li>
-              </ul>
-            </motion.div>
-
-            {/* Tech Stack */}
-            <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-900/60 border border-slate-700 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/20 transition"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <Briefcase className="text-blue-400" size={28} />
-                <h3 className="text-2xl font-semibold">Tech Stack</h3>
-              </div>
-              <div className="grid grid-cols-3 gap-4 text-center">
-                <span className="p-2 bg-slate-800 rounded-lg">⚛️ React</span>
-                <span className="p-2 bg-slate-800 rounded-lg">🌐 Node.js</span>
-                <span className="p-2 bg-slate-800 rounded-lg">🍃 MongoDB</span>
-                <span className="p-2 bg-slate-800 rounded-lg">🐍 Python</span>
-                <span className="p-2 bg-slate-800 rounded-lg">🌀 Tailwind</span>
-                <span className="p-2 bg-slate-800 rounded-lg">📱 Flutter</span>
-              </div>
-            </motion.div>
-
-            {/* Achievements / Experience */}
-            <motion.div
-              initial={{ opacity: 0, x: 60 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-900/60 border border-slate-700 rounded-2xl p-6 shadow-lg hover:shadow-indigo-500/20 transition"
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <Award className="text-indigo-400" size={28} />
-                <h3 className="text-2xl font-semibold">Experience</h3>
-              </div>
-              <ul className="space-y-3">
-                <li className="hover:text-indigo-400 transition">🌟 Intern @ Dev Company</li>
-                <li className="hover:text-indigo-400 transition">🏆 Hackathon Winner</li>
-                <li className="hover:text-indigo-400 transition">📚 Open Source Contributor</li>
-              </ul>
-            </motion.div>
+          {/* Tabs */}
+          <div className="flex justify-center">
+            <Tabs
+              defaultActiveKey="1"
+              items={items}
+              className="custom-tabs w-full lg:w-3/4"
+              centered
+            />
           </div>
         </div>
       </section>
+
+
 
 
 
@@ -417,7 +386,7 @@ const MainPage = () => {
 
 
 
-    </div>
+    </div >
   );
 };
 

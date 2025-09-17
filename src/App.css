@@ -49,3 +49,19 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.5);
 }
+
+/* Tabs text ko white karne ke liye */
+.custom-tabs .ant-tabs-tab-btn {
+  color: white !important;
+}
+
+/* Hover effect thoda cyan ya teal rakhna chaho to */
+.custom-tabs .ant-tabs-tab-btn:hover {
+  color: #22d3ee !important; /* Tailwind cyan-400 */
+}
+
+/* Active tab underline ko full width + cyan color dena */
+.custom-tabs .ant-tabs-ink-bar {
+  background: #22d3ee !important; /* cyan underline */
+  height: 3px !important;
+}
