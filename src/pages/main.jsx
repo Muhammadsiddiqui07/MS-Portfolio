@@ -27,6 +27,7 @@ import {
   SiGit,
 } from "react-icons/si";
 import { Tabs } from 'antd';
+import Frontend from "../components/frontend";
 
 
 
@@ -65,7 +66,7 @@ const MainPage = () => {
     {
       key: '1',
       label: 'Front End',
-      children: 'Content of Tab Pane 1',
+      children: <Frontend />,
     },
     {
       key: '2',
