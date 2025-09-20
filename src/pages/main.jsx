@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import Navbar from "../components/navbar";
-import { NavLink } from "react-router-dom";
 import { Typewriter } from "react-simple-typewriter";
 import mainBg from "../Assests/main-bg.jpeg";
 import profile from '../Assests/profile.jpg'
@@ -28,9 +27,11 @@ import {
 } from "react-icons/si";
 import { Tabs } from 'antd';
 import Frontend from "../components/frontend";
-
-
-
+import Backend from '../components/Backend'
+import WhatsappBtn from '../components/WhatsAppButton'
+import { Link } from "react-scroll";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import ContactSection from '../components/contactsection'
 
 
 
@@ -71,14 +72,16 @@ const MainPage = () => {
     {
       key: '2',
       label: 'Back End',
-      children: 'Content of Tab Pane 2',
-    },
-    {
-      key: '3',
-      label: 'Client Projects',
-      children: 'Content of Tab Pane 3',
+      children: <Backend />,
     },
   ];
+
+  const [socialLinks] = useState([
+    { icon: <FaFacebook />, url: "https://www.facebook.com/muhammad.siddiqui.7773" },
+    { icon: <FaInstagram />, url: "https://www.instagram.com/muhammadsiddiqui07" },
+    { icon: <FaGithub />, url: "https://github.com/Muhammadsiddiqui07" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/muhammad-siddiqui-b39a581b4" },
+  ]);
 
 
   return (
@@ -141,14 +144,35 @@ const MainPage = () => {
                 </p>
               </div>
 
+              {/* Social Icons */}
+              <div className="flex gap-5 pt-6">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-cyan-400 text-2xl transition-colors duration-300"
+                  >
+                    {social.icon}
+                  </a>
+                ))}
+              </div>
+
+
               {/* CTA Buttons */}
               <div className="pt-2 flex gap-4">
-                <NavLink to="/checkout">
+                <Link
+                  to="contact" // 👈 id of your contact section
+                  smooth={true}
+                  duration={600}
+                  offset={-80}
+                >
                   <button className="group inline-flex items-center gap-3 bg-gradient-to-r from-cyan-600 to-teal-600 text-white px-8 py-4 rounded-full text-base lg:text-lg font-semibold hover:from-cyan-500 hover:to-teal-500 transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-teal-500/30">
                     Hire Me
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
-                </NavLink>
+                </Link>
 
                 <a
                   href="/MS_MERN_CV.pdf" // yaha apna pdf file ka path do (e.g. /assets/resume.pdf ya public folder me resume.pdf)
@@ -183,6 +207,7 @@ const MainPage = () => {
             </div>
           </div>
         </div>
+        <WhatsappBtn />
       </div>
 
       <section
@@ -312,78 +337,10 @@ const MainPage = () => {
         id="contact"
         className="relative min-h-screen bg-gradient-to-br from-gray-950 via-slate-950 to-black py-20 px-6 lg:px-12"
       >
-        <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white">
-            Get In <span className="text-cyan-400">Touch</span>
-          </h2>
-          <p className="text-gray-400 mt-2">
-            Feel free to reach out for collaborations, freelance projects, or just
-            to say hello 👋
-          </p>
-        </div>
+        <ContactSection />
 
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 ">
-          {/* Left Side - Info */}
-          <div className="space-y-6 text-white flex flex-col justify-center">
-            <h3 className="text-2xl font-semibold text-cyan-400">Let’s Talk</h3>
-            <p className="text-gray-300 leading-relaxed mb-22">
-              I’m always open to discussing new projects, creative ideas, or
-              opportunities to be part of your vision.
-            </p>
-
-            <div className="space-y-4">
-              <p>
-                <span className="font-semibold text-cyan-300">Email:</span>{" "}
-                <a
-                  href="mailto:youremail@gmail.com"
-                  className="hover:text-teal-300 transition"
-                >
-                  muhammadsiddiqui1410@gmail.com
-                </a>
-              </p>
-              <p>
-                <span className="font-semibold text-cyan-300">Phone:</span>{" "}
-                <a href="tel:+923000000000" className="hover:text-teal-300 transition">
-                  +92 336 3293562
-                </a>
-              </p>
-            </div>
-          </div>
-
-          {/* Right Side - Contact Form */}
-          <div className="bg-slate-900/60 backdrop-blur-md p-8 rounded-2xl shadow-lg shadow-cyan-500/20 border border-cyan-500/20">
-            <form className="space-y-6">
-              <div>
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-cyan-500/20 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                />
-              </div>
-              <div>
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-cyan-500/20 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                />
-              </div>
-              <div>
-                <textarea
-                  rows="4"
-                  placeholder="Your Message"
-                  className="w-full px-4 py-3 rounded-lg bg-slate-800 border border-cyan-500/20 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-3 rounded-lg hover:from-cyan-400 hover:to-blue-500 transition transform hover:scale-105 shadow-lg shadow-cyan-500/30"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
       </section>
+
 
 
 

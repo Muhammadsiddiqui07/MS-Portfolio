@@ -1,10 +1,10 @@
 import { Steps } from "antd";
-import inventry from '../Assests/inventry.jpg'
-import elearning from '../Assests/elearning.jpg'
-import attendence from '../Assests/ecommerce.jpeg'
-import ecommerce from '../Assests/attendence.png'
+import login from '../Assests/backend1.jpg'
+import grocery from '../Assests/backend3.jpg'
+import backendInventry from '../Assests/backend1.jpg'
+import googleAuth from '../Assests/backend3.jpg'
 
-const backendProjects = [
+const Projects = [
     {
         title: "Login & Signup APIs",
         description:
@@ -42,7 +42,7 @@ export default function Backend() {
                 <Steps
                     direction="vertical"
                     current={-1}
-                    items={projects.map((project, index) => ({
+                    items={Projects.map((project, index) => ({
                         title: (
                             <div className="grid lg:grid-cols-2 gap-10 items-center py-8">
                                 {/* Left content */}
