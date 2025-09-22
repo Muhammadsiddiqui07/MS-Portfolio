@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/static/css/main.636f88f0.css",
-    "main.js": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/static/js/main.17b9aa04.js",
-    "static/js/453.623c7ca3.chunk.js": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/static/js/453.623c7ca3.chunk.js",
-    "static/media/backend3.jpg": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/static/media/backend3.ddb69e7a42e169299b26.jpg",
-    "static/media/backend1.jpg": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/static/media/backend1.4845a8089f0ffbc39aa6.jpg",
-    "static/media/elearning.jpg": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/static/media/elearning.8e86e08bc4fa8c897da3.jpg",
-    "static/media/inventry.jpg": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/static/media/inventry.be2dda3d7f27445a59ab.jpg",
-    "static/media/profile.jpg": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/static/media/profile.d8cd8b14ca348660cc65.jpg",
-    "static/media/main-bg.jpeg": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/static/media/main-bg.804f17f934c0db65b92e.jpeg",
-    "index.html": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/index.html",
-    "main.636f88f0.css.map": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/static/css/main.636f88f0.css.map",
-    "main.17b9aa04.js.map": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/static/js/main.17b9aa04.js.map",
-    "453.623c7ca3.chunk.js.map": "/https://github.com/Muhammadsiddiqui07/MS-Portfolio.git/static/js/453.623c7ca3.chunk.js.map"
+    "main.css": "/MS-Portfolio/static/css/main.636f88f0.css",
+    "main.js": "/MS-Portfolio/static/js/main.20b7b824.js",
+    "static/js/453.623c7ca3.chunk.js": "/MS-Portfolio/static/js/453.623c7ca3.chunk.js",
+    "static/media/backend3.jpg": "/MS-Portfolio/static/media/backend3.ddb69e7a42e169299b26.jpg",
+    "static/media/backend1.jpg": "/MS-Portfolio/static/media/backend1.4845a8089f0ffbc39aa6.jpg",
+    "static/media/elearning.jpg": "/MS-Portfolio/static/media/elearning.8e86e08bc4fa8c897da3.jpg",
+    "static/media/inventry.jpg": "/MS-Portfolio/static/media/inventry.be2dda3d7f27445a59ab.jpg",
+    "static/media/profile.jpg": "/MS-Portfolio/static/media/profile.d8cd8b14ca348660cc65.jpg",
+    "static/media/main-bg.jpeg": "/MS-Portfolio/static/media/main-bg.804f17f934c0db65b92e.jpeg",
+    "index.html": "/MS-Portfolio/index.html",
+    "main.636f88f0.css.map": "/MS-Portfolio/static/css/main.636f88f0.css.map",
+    "main.20b7b824.js.map": "/MS-Portfolio/static/js/main.20b7b824.js.map",
+    "453.623c7ca3.chunk.js.map": "/MS-Portfolio/static/js/453.623c7ca3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.636f88f0.css",
-    "static/js/main.17b9aa04.js"
+    "static/js/main.20b7b824.js"
   ]
 }
