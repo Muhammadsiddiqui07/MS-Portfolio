@@ -18,12 +18,15 @@ import {
   SiBootstrap,
   SiVite,
   SiFirebase,
-  SiVuetify,
   SiAntdesign,
   SiExpress,
   SiPython,
   SiDotnet,
   SiGit,
+  SiMongodb,
+  SiPostman,
+  SiNextdotjs,
+  SiRedux,
 } from "react-icons/si";
 import { Tabs } from 'antd';
 import Frontend from "../components/frontend";
@@ -47,20 +50,22 @@ const MainPage = () => {
     { name: "HTML5", icon: <FaHtml5 className="text-orange-500 w-12 h-12" /> },
     { name: "CSS3", icon: <FaCss3Alt className="text-blue-500 w-12 h-12" /> },
     { name: "JavaScript", icon: <FaJsSquare className="text-yellow-400 w-12 h-12" /> },
-    { name: "Bootstrap", icon: <SiBootstrap className="text-purple-500 w-12 h-12" /> },
-    { name: "TailwindCSS", icon: <SiTailwindcss className="text-cyan-400 w-12 h-12" /> },
     { name: "React", icon: <FaReact className="text-cyan-300 w-12 h-12" /> },
+    { name: "Next.js", icon: <SiNextdotjs className="text-white w-12 h-12" /> },
+    { name: "Redux Toolkit", icon: <SiRedux className="text-purple-400 w-12 h-12" /> },
+    { name: "TailwindCSS", icon: <SiTailwindcss className="text-cyan-400 w-12 h-12" /> },
+    { name: "Bootstrap", icon: <SiBootstrap className="text-purple-500 w-12 h-12" /> },
     { name: "Vite", icon: <SiVite className="text-purple-400 w-12 h-12" /> },
     { name: "Node.js", icon: <FaNodeJs className="text-green-500 w-12 h-12" /> },
     { name: "Express.js", icon: <SiExpress className="text-gray-300 w-12 h-12" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-green-400 w-12 h-12" /> },
     { name: "Firebase", icon: <SiFirebase className="text-yellow-500 w-12 h-12" /> },
-    { name: "Ant Design", icon: <SiAntdesign className="text-blue-400 w-12 h-12" /> },
+    { name: "Python", icon: <SiPython className="text-yellow-400 w-12 h-12" /> },
+    { name: "C# / .NET", icon: <SiDotnet className="text-indigo-400 w-12 h-12" /> },
+    { name: "Git", icon: <SiGit className="text-red-500 w-12 h-12" /> },
     { name: "GitHub", icon: <FaGithub className="text-white w-12 h-12" /> },
-    { name: "VS Code", icon: <SiVuetify className="text-blue-500 w-12 h-12" /> },
-    { icon: <SiPython className="text-yellow-400 w-12 h-12" />, name: "Python" },
-    { icon: <SiGit className="text-red-500 w-12 h-12" />, name: "Git" },
-    { icon: <SiDotnet className="text-indigo-400 w-12 h-12" />, name: "ASP.NET MVC" },
-
+    { name: "Postman", icon: <SiPostman className="text-orange-400 w-12 h-12" /> },
+    { name: "Ant Design", icon: <SiAntdesign className="text-blue-400 w-12 h-12" /> },
   ];
 
   const items = [
@@ -236,14 +241,24 @@ const MainPage = () => {
             </h2>
 
             <p className="text-gray-300 leading-relaxed">
-              Hi, I’m <span className="text-cyan-400 font-semibold">Muhammad Siddiqui</span>,
-              a passionate <span className="text-teal-400">MERN Stack Developer </span>
-              with a strong interest in building modern, scalable, and visually appealing
-              web applications. I love turning ideas into functional products with clean
-              code and smooth user experiences.
+              Hi, I'm <span className="text-cyan-400 font-semibold">Muhammad Siddiqui</span> — a
+              <span className="text-teal-400 font-semibold"> Final-Year Computer Science Student</span> at
+              PAF-KIET University and a passionate{" "}
+              <span className="text-teal-400 font-semibold">MERN Stack Developer</span> with 1+ years of
+              practical experience building scalable, production-ready web applications. Currently working
+              as a <span className="text-cyan-300">MERN Stack Developer Intern at AHST Visions</span>, I
+              specialize in crafting performant frontend interfaces with React &amp; Tailwind CSS and
+              engineering secure RESTful APIs with Node.js, Express.js, and MongoDB.
             </p>
 
-            <p className="text-gray-400 italic">
+            <p className="text-gray-400 leading-relaxed text-sm">
+              Beyond core web technologies, I have a strong foundation in Data Structures, Algorithms,
+              Network Programming (TCP/Sockets), and Machine Learning fundamentals. I thrive in agile
+              team environments, continuous learning, and building robust full-stack solutions from
+              concept to deployment.
+            </p>
+
+            <p className="text-teal-400 italic text-sm">
               "Code with creativity, design with purpose, and build with passion."
             </p>
 
@@ -251,21 +266,118 @@ const MainPage = () => {
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="p-4 rounded-lg bg-slate-900/60 border border-cyan-500/20 hover:scale-105 transition">
                 <h4 className="text-cyan-400 font-semibold">Frontend</h4>
-                <p className="text-sm text-gray-300">React.js, Tailwind Css, Ant Design</p>
+                <p className="text-sm text-gray-300">React.js, Next.js, Redux Toolkit, Tailwind CSS</p>
               </div>
               <div className="p-4 rounded-lg bg-slate-900/60 border border-cyan-500/20 hover:scale-105 transition">
-                <h4 className="text-cyan-400 font-semibold">Backend</h4>
-                <p className="text-sm text-gray-300">Node.js, Express.js, Python, C#</p>
+                <h4 className="text-cyan-400 font-semibold">Backend &amp; API</h4>
+                <p className="text-sm text-gray-300">Node.js, Express.js, RESTful APIs, JWT, C#</p>
               </div>
               <div className="p-4 rounded-lg bg-slate-900/60 border border-cyan-500/20 hover:scale-105 transition">
-                <h4 className="text-cyan-400 font-semibold">Database</h4>
-                <p className="text-sm text-gray-300">MongoDB, SQL, Firebase, mySql</p>
+                <h4 className="text-cyan-400 font-semibold">Databases</h4>
+                <p className="text-sm text-gray-300">MongoDB, Firebase (Firestore), MySQL</p>
               </div>
               <div className="p-4 rounded-lg bg-slate-900/60 border border-cyan-500/20 hover:scale-105 transition">
-                <h4 className="text-cyan-400 font-semibold">Tools</h4>
-                <p className="text-sm text-gray-300">Git, Postman, VS Code, Google Coolab</p>
+                <h4 className="text-cyan-400 font-semibold">Core CS &amp; ML</h4>
+                <p className="text-sm text-gray-300">DSA, Network Programming, Python (Scikit-Learn)</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── EXPERIENCE SECTION ── */}
+      <section
+        id="experience"
+        className="relative py-20 bg-gradient-to-br from-gray-950 via-slate-950 to-black text-white px-6 lg:px-12"
+      >
+        <div className="max-w-5xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: -30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl lg:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent"
+          >
+            Experience
+          </motion.h2>
+
+          <div className="space-y-8">
+            {/* AHST Visions */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="relative bg-slate-900/60 border border-cyan-500/20 rounded-2xl p-6 lg:p-8 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300"
+            >
+              {/* Badge */}
+              <span className="absolute top-6 right-6 text-xs font-semibold text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 px-3 py-1 rounded-full">
+                Dec 2024 – Present
+              </span>
+              <div className="flex items-start gap-4 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-teal-500 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  A
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">MERN Stack Developer Intern</h3>
+                  <p className="text-teal-400 font-medium">AHST Visions</p>
+                </div>
+              </div>
+              <ul className="space-y-3 text-gray-300 text-sm leading-relaxed">
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400 mt-1">▹</span>
+                  <span><span className="text-white font-semibold">API Optimization:</span> Reduced average API response times by <span className="text-cyan-300 font-semibold">~25%</span> through refactoring Express.js endpoints and optimizing MongoDB queries across multiple features.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400 mt-1">▹</span>
+                  <span><span className="text-white font-semibold">Code Quality &amp; Stability:</span> Cut UI bugs by <span className="text-cyan-300 font-semibold">~30%</span> by leading debugging sessions and participating in peer code reviews using Git branching/rebase workflows.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-cyan-400 mt-1">▹</span>
+                  <span><span className="text-white font-semibold">Component Design:</span> Built reusable Tailwind CSS &amp; React components connected to backend micro-services, shortening integration time by <span className="text-cyan-300 font-semibold">2 days per sprint</span>.</span>
+                </li>
+              </ul>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Git"].map(tag => (
+                  <span key={tag} className="text-xs px-3 py-1 rounded-full bg-slate-800 border border-slate-600 text-gray-300">{tag}</span>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Nexus */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="relative bg-slate-900/60 border border-teal-500/20 rounded-2xl p-6 lg:p-8 hover:border-teal-400/50 hover:shadow-lg hover:shadow-teal-500/10 transition-all duration-300"
+            >
+              {/* Badge */}
+              <span className="absolute top-6 right-6 text-xs font-semibold text-teal-400 bg-teal-500/10 border border-teal-500/30 px-3 py-1 rounded-full">
+                Sep 2024 – Nov 2024
+              </span>
+              <div className="flex items-start gap-4 mb-5">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-blue-500 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
+                  N
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">Frontend Developer Intern</h3>
+                  <p className="text-teal-400 font-medium">Nexus</p>
+                </div>
+              </div>
+              <ul className="space-y-3 text-gray-300 text-sm leading-relaxed">
+                <li className="flex items-start gap-2">
+                  <span className="text-teal-400 mt-1">▹</span>
+                  <span><span className="text-white font-semibold">Figma to React:</span> Translated <span className="text-teal-300 font-semibold">10+ Figma mockups</span> into pixel-perfect, responsive React web pages with a <span className="text-teal-300 font-semibold">~40%</span> reduction in cross-browser UI issues.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-teal-400 mt-1">▹</span>
+                  <span><span className="text-white font-semibold">State Management:</span> Reduced unnecessary re-renders using custom React hooks, boosting page loading speeds by <span className="text-teal-300 font-semibold">~20%</span>.</span>
+                </li>
+              </ul>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {["React.js", "Tailwind CSS", "Figma", "JavaScript", "Custom Hooks"].map(tag => (
+                  <span key={tag} className="text-xs px-3 py-1 rounded-full bg-slate-800 border border-slate-600 text-gray-300">{tag}</span>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

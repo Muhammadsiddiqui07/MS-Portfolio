@@ -6,27 +6,27 @@ import googleAuth from '../Assests/backend3.jpg'
 
 const Projects = [
     {
-        title: "Login & Signup APIs",
+        title: "FreshMart — Grocery Store APIs",
         description:
-            "REST APIs for user registration and authentication built with Node.js, Express, and MongoDB. Includes JWT-based authentication and password encryption.",
+            "RESTful backend APIs for the FreshMart grocery store: product management, category filtering, cart operations, order placement, and a fully secured Admin Dashboard. Built with Node.js, Express.js, and MongoDB with JWT authentication.",
         image: login,
     },
     {
-        title: "Grocery Store APIs",
+        title: "Inventory Management System APIs",
         description:
-            "Backend APIs for managing grocery store operations including products, categories, cart, and orders. Built with Node.js, Express, and MongoDB.",
+            "Backend service with Role-Based Access Control (RBAC) for managing stock levels, suppliers, and product records. Includes automated low-stock alert endpoints and dynamic CRUD APIs. Developed with Node.js, Express.js, and MongoDB.",
         image: grocery,
     },
     {
-        title: "Inventory Management System",
+        title: "Live Attendance System — Server",
         description:
-            "A backend service for managing stock, suppliers, and product records with CRUD APIs. Developed using Node.js, Express, and MongoDB.",
+            "Multi-threaded TCP server in C# that handles concurrent client connections via raw socket communication, managing real-time student/employee attendance records with thread synchronization and session management.",
         image: backendInventry,
     },
     {
-        title: "Google Authentication",
+        title: "JWT Authentication System",
         description:
-            "OAuth 2.0 based authentication using Google sign-in, integrated with MongoDB to store user profiles.",
+            "Secure user registration and login REST APIs built with Node.js, Express.js, and MongoDB. Features bcrypt password hashing, JWT token generation/refresh, and protected route middleware for full authentication flows.",
         image: googleAuth,
     },
 ];

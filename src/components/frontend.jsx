@@ -1,37 +1,45 @@
 import { Steps } from "antd";
 import inventry from '../Assests/inventry.jpg'
-import elearning from '../Assests/elearning.jpg'
 import attendence from '../Assests/ecommerce.jpeg'
-import ecommerce from '../Assests/attendence.png'
+import ecommerce from '../Assests/WhatsApp Image 2026-08-12 at 3.22.30 PM.jpeg'
+import backend1 from '../Assests/backend1.jpg'
+import trafficLight from '../Assests/Screenshot 2026-08-12 161159.png'
 
 const projects = [
     {
-
-        title: "Inventory Management System",
+        title: "🛒 FreshMart — Full-Stack Grocery Store",
+        stack: "React.js · Tailwind CSS · Node.js · Express.js · MongoDB · JWT",
         description:
-            "A complete inventory management solution built with React, Node.js, Express, and MongoDB. Features include stock tracking, product categorization, supplier management, and sales reports with secure authentication.",
+            "A complete full-stack grocery store application with user authentication, product filtering & search, real-time interactive shopping cart, order placement, and an Admin Dashboard for product CRUD operations & inventory tracking.",
+        image: ecommerce,
+    },
+    {
+        title: "📦 Inventory Management System",
+        stack: "MongoDB · Express.js · React.js · Node.js · JWT",
+        description:
+            "A robust MERN stack inventory solution with Role-Based Access Control (RBAC), secure stock tracking, dynamic supplier management, and automated low-stock alerts. Includes secure JWT authentication.",
         image: inventry,
-
     },
     {
-
-        title: "E-Learning Platform",
+        title: "📡 Live Attendance System",
+        stack: "C# · TCP Sockets · Multi-threading · Network Programming",
         description:
-            "An interactive e-learning platform built with React and Firebase. Features include course management, real-time content updates, user authentication, and progress tracking for students.",
-        image: elearning,
-
-    },
-    {
-        title: "Attendance Application",
-        description:
-            "A web-based attendance management system where teachers can mark and track student attendance. Built using React, Node.js, Express, and MongoDB with secure authentication.",
+            "A real-time client-server console application that tracks student/employee attendance via raw TCP socket communication. Features concurrent thread synchronization for handling multiple simultaneous client connections.",
         image: attendence,
     },
     {
-        title: "E-Commerce Dashboard",
+        title: "🚦 Traffic Light Controller Simulation",
+        stack: "React.js · Tailwind CSS · Finite State Machines (DFA)",
         description:
-            "An admin dashboard for managing products, orders, and users in an e-commerce platform. Built with React, Ant Design, Node.js, and MongoDB for analytics and CRUD operations.",
-        image: ecommerce,
+            "A 4-way intersection traffic light controller simulation built on Deterministic Finite Automata (DFA) principles. Uses custom React state hooks to model state transitions accurately — inspired by Theory of Automata.",
+        image: trafficLight,
+    },
+    {
+        title: "🤖 KNN Classification Model",
+        stack: "Python · Scikit-Learn · Pandas · NumPy · Matplotlib",
+        description:
+            "A machine learning classification model using K-Nearest Neighbors algorithm. Covers end-to-end ML pipeline: data preprocessing, train/test split, model training, accuracy evaluation, and confusion matrix visualization.",
+        image: backend1,
     },
 ];
 
@@ -39,7 +47,7 @@ export default function Frontend() {
     return (
         <div className="text-white">
             <h1 className="text-2xl lg:text-3xl font-bold text-center mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                My Projects
+                Featured Projects
             </h1>
 
             <div className="max-w-6xl mx-auto">
@@ -51,13 +59,16 @@ export default function Frontend() {
                             <div className="grid lg:grid-cols-2 gap-10 items-center py-8">
                                 {/* Left content */}
                                 <div
-                                    className={`space-y-4 ${index % 1 === 0 ? "order-1" : "order-2 lg:order-1"
+                                    className={`space-y-3 ${index % 2 === 0 ? "order-1" : "order-2 lg:order-1"
                                         }`}
                                 >
-                                    <h2 className="text-2xl font-semibold text-cyan-400">
+                                    <h2 className="text-xl lg:text-2xl font-bold text-cyan-400">
                                         {project.title}
                                     </h2>
-                                    <p className="text-gray-300 text-lg leading-relaxed">
+                                    <p className="text-xs text-teal-400/80 font-medium tracking-wide">
+                                        {project.stack}
+                                    </p>
+                                    <p className="text-gray-300 text-base leading-relaxed">
                                         {project.description}
                                     </p>
                                 </div>

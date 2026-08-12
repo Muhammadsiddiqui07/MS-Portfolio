@@ -34,7 +34,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {["home", "about", "skills", "portfolio", "contact"].map((section) => (
+            {["home", "about", "experience", "skills", "portfolio", "contact"].map((section) => (
               <Link
                 key={section}
                 to={section}
@@ -67,7 +67,7 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-cyan-500/20 bg-slate-950/95 backdrop-blur-md">
             <div className="flex flex-col space-y-4">
-              {["home", "about", "skills", "portfolio", "contact"].map((section) => (
+              {["home", "about", "experience", "skills", "portfolio", "contact"].map((section) => (
                 <Link
                   key={section}
                   to={section}
